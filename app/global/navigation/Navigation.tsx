@@ -1,4 +1,3 @@
-import { View, Text } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import * as SplashScreen from 'expo-splash-screen'
 import {
@@ -30,8 +29,6 @@ const Navigation = () => {
 			setCurrentRoute(navRef.getCurrentRoute?.name)
 		)
 
-		// console.log(currentRoute)
-
 		return () => {
 			navRef.removeListener('state', listener)
 		}
@@ -59,10 +56,6 @@ const Navigation = () => {
 			</NavigationContainer>
 
 			<BottomMenu nav={navRef.navigate} currentRoute={currentRoute} />
-
-			{/* {currentRoute ? (
-				<BottomMenu nav={navRef.navigate} currentRoute={currentRoute} />
-			) : (<View><Text>No CR</Text></View>)} */}
 		</>
 	)
 }

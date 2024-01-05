@@ -1,4 +1,4 @@
-import { View, Text } from 'react-native'
+import { View } from 'react-native'
 import React, { FC } from 'react'
 import { IBottomMenu } from './types/types'
 import { menuData } from './constants/constants'
@@ -7,7 +7,6 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context'
 
 const BottomMenu: FC<IBottomMenu> = ({ currentRoute, nav }) => {
 	const { bottom } = useSafeAreaInsets()
-	// const bottomPadding = bottom + 10
 
 	return (
 		<View
