@@ -12,5 +12,5 @@ import { Control } from 'react-hook-form'
 export type IInputProps = {
 	control: Control<any>
 	name: string
-	rules: any
+	rules?: any
 } & TextInputProps

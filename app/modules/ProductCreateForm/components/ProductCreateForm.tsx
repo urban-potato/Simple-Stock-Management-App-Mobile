@@ -7,37 +7,31 @@ import {
 } from 'react-native'
 import React from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
-import { ICreateProductData } from '../types/types'
-import { useCreateSmartphoneProductMutation } from '../api/product.api'
+import { IProduct } from '../../../global/types/types'
+import { useCreateProductMutation } from '../api/products.api'
 import Loader from '@/ui/Loader/Loader'
 import Button from '@/ui/Button/Button'
 import ProductCreateFormFields from './ProductCreateFormFields'
 
 const ProductCreateForm = () => {
-	const { reset, handleSubmit, control } = useForm<ICreateProductData>({
+	const { reset, handleSubmit, control } = useForm<IProduct>({
 		mode: 'onChange'
 	})
 
-	const [doCreateSmartphoneProduct, doCreateSmartphoneProductResult] =
-		useCreateSmartphoneProductMutation()
+	const [doCreateProduct, doCreateProductResult] = useCreateProductMutation()
 
-	const onSubmit: SubmitHandler<ICreateProductData> = data => {
-		const { brand, model, price, ram, storage } = data
+	const onSubmit: SubmitHandler<IProduct> = data => {
+		const { brand, model, description, price, quantity } = data
 
 		const submitData = {
-			category: 'smartphone',
-			image: 'no_image',
 			brand: brand,
 			model: model,
+			description: description,
 			price: price,
-			ram: ram,
-			storage: storage
+			quantity: quantity
 		}
 
-		// console.log('submitData')
-		// console.log(submitData)
-
-		doCreateSmartphoneProduct(submitData)
+		doCreateProduct(submitData)
 			.unwrap()
 			.then(() => {
 				console.log('Product created')
@@ -66,7 +60,7 @@ const ProductCreateForm = () => {
 					) : (
 						<>
 							<ProductCreateFormFields control={control} />
-							<Button onPress={handleSubmit(onSubmit)} className=''>
+							<Button onPress={handleSubmit(onSubmit)} classNames='mt-3'>
 								Save
 							</Button>
 						</>

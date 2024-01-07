@@ -7,7 +7,7 @@ import { IInputProps } from './types/types'
 const Input: FC<IInputProps> = ({
 	control,
 	name,
-	rules,
+	rules = {},
 	placeholder,
 	keyboardType
 }) => {

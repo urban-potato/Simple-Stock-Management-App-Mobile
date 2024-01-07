@@ -1,10 +1,10 @@
 import React, { FC } from 'react'
 import { Control } from 'react-hook-form'
-import { ICreateProductData } from '../types/types'
+import { IProduct } from '../../../global/types/types'
 import Input from '@/ui/Input/Input'
 
 const ProductCreateFormFields: FC<{
-	control: Control<ICreateProductData>
+	control: Control<IProduct>
 }> = ({ control }) => {
 	return (
 		<>
@@ -26,6 +26,14 @@ const ProductCreateFormFields: FC<{
 
 			<Input
 				control={control}
+				name='description'
+				placeholder='Enter Description'
+				rules={{}}
+				keyboardType='default'
+			/>
+
+			<Input
+				control={control}
 				name='price'
 				placeholder='Enter Price'
 				rules={{
@@ -33,6 +41,10 @@ const ProductCreateFormFields: FC<{
 					pattern: {
 						value: '/^[0-9]+$/',
 						message: 'Enter number'
+					},
+					min: {
+						value: 0,
+						message: 'Minimum value is 0'
 					}
 				}}
 				keyboardType='numeric'
@@ -40,27 +52,17 @@ const ProductCreateFormFields: FC<{
 
 			<Input
 				control={control}
-				name='ram'
-				placeholder='Enter RAM'
+				name='quantity'
+				placeholder='Enter Quantity'
 				rules={{
-					required: 'RAM is required',
+					required: 'Quantity is required',
 					pattern: {
 						value: '/^[0-9]+$/',
 						message: 'Enter number'
-					}
-				}}
-				keyboardType='numeric'
-			/>
-
-			<Input
-				control={control}
-				name='storage'
-				placeholder='Enter Storage'
-				rules={{
-					required: 'Storage is required',
-					pattern: {
-						value: '/^[0-9]+$/',
-						message: 'Enter number'
+					},
+					min: {
+						value: 0,
+						message: 'Minimum value is 0'
 					}
 				}}
 				keyboardType='numeric'

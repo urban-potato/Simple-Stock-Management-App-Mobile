@@ -10,9 +10,9 @@ const BottomMenu: FC<IBottomMenu> = ({ currentRoute, nav }) => {
 
 	return (
 		<View
-			className='pt-5 px-3 flex-row justify-center items-center w-full bg-primaryDarkColor'
+			className='pt-[13px] px-3 flex-row justify-center items-center w-full bg-primaryDarkColor'
 			style={{
-				paddingBottom: bottom + 17
+				paddingBottom: bottom + 13
 			}}
 		>
 			{menuData.map(item => (

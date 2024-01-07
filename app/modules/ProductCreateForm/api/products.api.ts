@@ -1,11 +1,12 @@
+import { IProduct } from '@/global/types/types'
 import { api } from '../../../global/api/api'
 
 const smartphoneApi = api.injectEndpoints({
 	endpoints: builder => ({
-		createSmartphoneProduct: builder.mutation({
+		createProduct: builder.mutation<void, IProduct>({
 			query: data => ({
 				body: data,
-				url: '/api/shop/smartphone',
+				url: '/api/products',
 				method: 'POST',
 				credentials: 'same-origin'
 			}),
@@ -15,4 +16,4 @@ const smartphoneApi = api.injectEndpoints({
 	})
 })
 
-export const { useCreateSmartphoneProductMutation } = smartphoneApi
+export const { useCreateProductMutation } = smartphoneApi

@@ -11,7 +11,7 @@ const Stack = createNativeStackNavigator()
 TODO:
 	[+] - Navigation
 	[+] - Create Product Screen
-	[ ] - Products Screen (Home)
+	[+] - Products Screen (Home)
 	[ ] - Product Screen
 	[ ] - Change Product Screen
 	[ ] - Customize Alerts
