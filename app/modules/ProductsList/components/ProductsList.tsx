@@ -1,8 +1,7 @@
 import { FlatList } from 'react-native'
-import React, { FC, useEffect } from 'react'
+import React, { FC } from 'react'
 import { useGetAllProductsQuery } from '../api/products.api'
 import ProductItem from './ProductItem'
-import { HomeScreenProps } from '@/screens/HomeScreen/types/types'
 import { ProductsListData } from '../types/types'
 import { IProduct } from '@/global/types/types'
 
@@ -12,8 +11,6 @@ const ProductsList: FC<ProductsListData> = ({ navigation }) => {
 		data: dataGetAllProducts,
 		error: errorGetAllProducts
 	} = useGetAllProductsQuery(undefined)
-
-	// useEffect(() => {}, [dataGetAllProducts])
 
 	return (
 		<FlatList

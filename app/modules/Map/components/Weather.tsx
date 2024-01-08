@@ -34,7 +34,7 @@ const Weather = () => {
 			/>
 
 			<Text className='text-xl text-secondaryLightColor ml-2'>
-				Krasnoyarsk: {temperature} °C
+				{city}: {temperature} °C
 			</Text>
 		</View>
 	)

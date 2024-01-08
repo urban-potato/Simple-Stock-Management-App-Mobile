@@ -1,9 +1,9 @@
 import { View, Text, Pressable } from 'react-native'
 import React, { FC } from 'react'
-import { IProduct } from '@/global/types/types'
 import { AppConstants } from '@/global/contants/constants'
 import { SimpleLineIcons } from '@expo/vector-icons'
 import { ProductItemData } from '../types/types'
+import cn from 'clsx'
 
 const ProductItem: FC<ProductItemData> = ({
 	id,
@@ -16,7 +16,10 @@ const ProductItem: FC<ProductItemData> = ({
 }) => {
 	return (
 		<Pressable
-			className='flex-row rounded-xl p-4 my-2 bg-primarySemiDarkColor justify-between'
+			className={cn(
+				'flex-row rounded-xl p-4 my-2 bg-primarySemiDarkColor justify-between',
+				quantity === 0 && 'bg-secondaryDarkColor'
+			)}
 			onPress={() => {
 				navigation.navigate('Product', { id: id })
 			}}
