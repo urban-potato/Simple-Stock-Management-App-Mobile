@@ -1,7 +1,6 @@
 import { IRoute } from './types/types'
 import ProductScreen from '@/screens/ProductScreen/ProductScreen'
 import MapScreen from '@/screens/MapScreen/MapScreen'
-import CurrencyScreen from '@/screens/CurrencyScreen/CurrencyScreen'
 import CreateProductScreen from '@/screens/CreateProductScreen/CreateProductScreen'
 import HomeScreen from '@/screens/HomeScreen/HomeScreen'
 import EditProductScreen from '@/screens/EditProductScreen/EditProductScreen'
@@ -26,9 +25,5 @@ export const routes: IRoute[] = [
 	{
 		name: 'Map',
 		component: MapScreen
-	},
-	{
-		name: 'Currency',
-		component: CurrencyScreen
 	}
 ]

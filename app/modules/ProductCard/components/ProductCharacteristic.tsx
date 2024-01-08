@@ -7,11 +7,11 @@ const ProductCharacteristic: FC<ProductCharacteristicData> = ({
 	value
 }) => {
 	return (
-		<View className='flex-row gap-x-1 mb-2'>
+		<View className='flex-row gap-x-1 mb-2 flex-wrap'>
 			<Text className='text-[22px] font-bold text-secondaryLightColor'>
 				{name}
 			</Text>
-			<Text className='text-[22px] text-secondaryLightColor'>
+			<Text className='text-[22px] text-secondaryLightColor flex-shrink'>
 				{value === 0 || value ? value : 'no info'}
 			</Text>
 		</View>

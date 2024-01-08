@@ -1,7 +1,7 @@
 import { api } from '../../../global/api/api'
 import { EditProductApiData } from '../types/types'
 
-const smartphoneApi = api.injectEndpoints({
+const productsApi = api.injectEndpoints({
 	endpoints: builder => ({
 		editProduct: builder.mutation<void, EditProductApiData>({
 			query: ({ id, data }) => ({
@@ -16,4 +16,4 @@ const smartphoneApi = api.injectEndpoints({
 	})
 })
 
-export const { useEditProductMutation } = smartphoneApi
+export const { useEditProductMutation } = productsApi

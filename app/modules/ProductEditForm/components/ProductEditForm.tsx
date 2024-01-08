@@ -9,10 +9,13 @@ import React, { FC } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import Loader from '@/ui/Loader/Loader'
 import Button from '@/ui/Button/Button'
-import { EditProductApiData, EditProductData, ProductEditFormData } from '../types/types'
+import {
+	EditProductApiData,
+	EditProductData,
+	ProductEditFormData
+} from '../types/types'
 import { useEditProductMutation } from '../api/products.api'
 import ProductEditFormFields from './ProductEditFormFields'
-import { IProduct } from '@/global/types/types'
 
 const ProductEditForm: FC<ProductEditFormData> = ({ navigation, product }) => {
 	const defaultValues = {
@@ -31,11 +34,6 @@ const ProductEditForm: FC<ProductEditFormData> = ({ navigation, product }) => {
 	const [doEditProduct, doEditProductResult] = useEditProductMutation()
 
 	const onSubmit: SubmitHandler<EditProductData> = data => {
-		const { brand, model, description, price, quantity } = data
-
-		console.log('data')
-		console.log(data)
-
 		let submitData: EditProductApiData = {
 			id: product.id,
 			data: {}
@@ -43,14 +41,12 @@ const ProductEditForm: FC<ProductEditFormData> = ({ navigation, product }) => {
 
 		for (let key in data) {
 			if (data.hasOwnProperty(key)) {
-				if (!!data[key as keyof EditProductData]) {
-					submitData.data[key as keyof EditProductData] = data[key as keyof EditProductData]
+				if (!!data[key as keyof EditProductData] || key === 'description') {
+					submitData.data[key as keyof EditProductData] =
+						data[key as keyof EditProductData]?.toString()
 				}
 			}
 		}
-
-		console.log('submitData')
-		console.log(submitData)
 
 		doEditProduct(submitData)
 			.unwrap()

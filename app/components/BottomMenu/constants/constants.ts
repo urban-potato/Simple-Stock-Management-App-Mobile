@@ -1,16 +1,16 @@
-import { IMenuItem } from "../types/types";
+import { IMenuItem } from '../types/types'
 
 export const menuData: IMenuItem[] = [
-    {
-        path: "Home",
-        iconName: "appstore-o"
-    },
-    {
-        path: "Map",
-        iconName: "map-pin"
-    },
-    {
-        path: "Currency",
-        iconName: "attach-money"
-    }
+	{
+		path: 'Home',
+		iconName: 'menu'
+	},
+	{
+		path: 'CreateProduct',
+		iconName: 'plus-circle'
+	},
+	{
+		path: 'Map',
+		iconName: 'map-pin'
+	}
 ]

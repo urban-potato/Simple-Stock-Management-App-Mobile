@@ -6,7 +6,7 @@ const baseURL = URL ?? ''
 
 export const api = createApi({
 	reducerPath: 'api',
-	tagTypes: ['ProductsLit', 'Product'],
+	tagTypes: ['ProductsLit', 'Product', 'Weather'],
 	baseQuery: fetchBaseQuery({
 		baseUrl: baseURL,
 		prepareHeaders: headers => {

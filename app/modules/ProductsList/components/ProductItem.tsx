@@ -16,12 +16,12 @@ const ProductItem: FC<ProductItemData> = ({
 }) => {
 	return (
 		<Pressable
-			className='flex-row flex-wrap rounded-xl p-4 my-2 bg-primarySemiDarkColor justify-between'
+			className='flex-row rounded-xl p-4 my-2 bg-primarySemiDarkColor justify-between'
 			onPress={() => {
 				navigation.navigate('Product', { id: id })
 			}}
 		>
-			<View>
+			<View className='flex-shrink'>
 				<Text className='text-xl font-bold text-secondaryLightColor'>
 					ID: {id}
 				</Text>
@@ -30,7 +30,7 @@ const ProductItem: FC<ProductItemData> = ({
 				</Text>
 			</View>
 
-			<View className='flex-row justify-center items-center gap-x-2 mt-1'>
+			<View className='flex-row justify-center items-center gap-x-2 mt-1 ml-1'>
 				<Text className='text-3xl font-bold text-secondaryLightColor'>
 					{quantity}
 				</Text>

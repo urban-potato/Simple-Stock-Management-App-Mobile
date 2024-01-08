@@ -15,9 +15,8 @@ TODO:
 	[+] - Product Screen (product info, change product, delete product)
 	[+] - Change Product Screen
 	[+] - Format all Price values
-	[ ] - Map
-	[ ] - Currency API
-	[ ] - Customize Alerts
+	[+] - Map
+	[+] - Weather API
 */
 
 export default function App() {

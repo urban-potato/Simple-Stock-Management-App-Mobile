@@ -1,12 +1,13 @@
 import { View } from 'react-native'
 import React, { FC } from 'react'
 import MapView, { Marker } from 'react-native-maps'
+import Weather from './Weather'
 
 const Map: FC = () => {
 	return (
 		<View className='flex-1'>
 			<MapView
-				className='w-[100%] h-[100%]'
+				className='flex-grow'
 				initialRegion={{
 					latitude: 55.99434289869557,
 					longitude: 92.79753730675864,
@@ -31,6 +32,8 @@ const Map: FC = () => {
 					description={'Selling point 2'}
 				/>
 			</MapView>
+
+			<Weather />
 		</View>
 	)
 }

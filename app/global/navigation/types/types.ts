@@ -7,7 +7,6 @@ export type TypeRootStackParamList = {
 	Product: { id: number }
 	EditProduct: { product: IProduct }
 	Map: undefined
-	Currency: undefined
 }
 
 export interface IRoute {

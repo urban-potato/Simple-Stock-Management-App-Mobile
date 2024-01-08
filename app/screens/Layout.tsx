@@ -15,7 +15,7 @@ const Layout: FC<PropsWithChildren> = ({ children }) => {
 			}}
 			className='flex-1'
 		>
-			<View className='flex-1 px-6'>{children}</View>
+			<View className='flex-1 px-6 pt-1'>{children}</View>
 		</View>
 	)
 }

@@ -2,7 +2,7 @@ import { IProduct } from '@/global/types/types'
 import { api } from '../../../global/api/api'
 import { EditProductQuantityApiData } from '../types/types'
 
-const smartphoneApi = api.injectEndpoints({
+const productsApi = api.injectEndpoints({
 	endpoints: builder => ({
 		getProduct: builder.query<IProduct, number>({
 			query: id => ({
@@ -40,4 +40,4 @@ export const {
 	useGetProductQuery,
 	useDeleteProductMutation,
 	useEditProductQuantityMutation
-} = smartphoneApi
+} = productsApi

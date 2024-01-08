@@ -7,14 +7,14 @@ import Layout from '../Layout'
 const HomeScreen: FC<HomeScreenProps> = ({ navigation }) => {
 	return (
 		<Layout>
-			<Button
+			{/* <Button
 				onPress={() => {
 					navigation.navigate('CreateProduct')
 				}}
 				classNames='my-3'
 			>
 				CREATE PRODUCT
-			</Button>
+			</Button> */}
 
 			<ProductsList navigation={navigation} />
 		</Layout>

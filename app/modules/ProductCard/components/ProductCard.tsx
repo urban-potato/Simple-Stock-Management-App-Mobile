@@ -123,12 +123,6 @@ const ProductCard: FC<ProductCardData> = ({ id, navigation }) => {
 								-
 							</Button>
 
-							{/* <View className='bg-secondaryLightColor py-2 px-8 rounded-xl mx-2'>
-								<Text className='text-3xl font-bold text-primaryDarkColor '>
-									{dataGetProduct?.quantity}
-								</Text>
-							</View> */}
-
 							<Text className='text-3xl font-bold text-secondaryLightColor mx-5'>
 								{dataGetProduct?.quantity}
 							</Text>
@@ -154,19 +148,19 @@ const ProductCard: FC<ProductCardData> = ({ id, navigation }) => {
 					<View className='flex-row justify-between items-center'>
 						<Button
 							onPress={() => {
-								handleDelete(id)
+								navigation.navigate('EditProduct', { product: dataGetProduct })
 							}}
 							classNames='my-3 flex-grow mr-2'
 						>
-							DELETE
+							EDIT
 						</Button>
 						<Button
 							onPress={() => {
-								navigation.navigate('EditProduct', { product: dataGetProduct })
+								handleDelete(id)
 							}}
 							classNames='my-3 flex-grow ml-2'
 						>
-							EDIT
+							DELETE
 						</Button>
 					</View>
 				</View>

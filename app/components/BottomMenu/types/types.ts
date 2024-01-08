@@ -1,7 +1,5 @@
 import { TypeRootStackParamList } from '@/global/navigation/types/types'
-import { AntDesign } from '@expo/vector-icons'
 import { Feather } from '@expo/vector-icons'
-import { MaterialIcons } from '@expo/vector-icons'
 
 export interface IBottomMenu {
 	nav: TypeNav
@@ -9,10 +7,7 @@ export interface IBottomMenu {
 }
 
 export interface IMenuItem {
-	iconName:
-		| keyof typeof AntDesign.glyphMap
-		| keyof typeof Feather.glyphMap
-		| keyof typeof MaterialIcons.glyphMap
+	iconName: keyof typeof Feather.glyphMap
 	path: keyof TypeRootStackParamList
 }
 
