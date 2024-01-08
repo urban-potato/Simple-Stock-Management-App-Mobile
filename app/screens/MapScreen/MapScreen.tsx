@@ -1,14 +1,16 @@
 import { Text, View } from 'react-native'
 import React, { Component } from 'react'
+import { Map } from '../../modules/Map'
+import Layout from '../Layout'
 
 export class MapScreen extends Component {
-  render() {
-    return (
-      <View>
-        <Text>MapScreen</Text>
-      </View>
-    )
-  }
+	render() {
+		return (
+			<Layout>
+				<Map />
+			</Layout>
+		)
+	}
 }
 
 export default MapScreen
