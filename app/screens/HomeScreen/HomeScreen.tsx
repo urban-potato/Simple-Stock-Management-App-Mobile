@@ -16,7 +16,7 @@ const HomeScreen: FC<HomeScreenProps> = ({ navigation }) => {
 				CREATE PRODUCT
 			</Button>
 
-			<ProductsList />
+			<ProductsList navigation={navigation} />
 		</Layout>
 	)
 }

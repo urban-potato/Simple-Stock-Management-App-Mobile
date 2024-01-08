@@ -1,8 +1,7 @@
-export interface IProduct {
-	id: number
+export interface CreateProductData {
 	brand: string
 	model: string
-	description: string
+	description?: string
 	price: number
 	quantity: number
 }

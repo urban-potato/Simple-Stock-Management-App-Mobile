@@ -1,10 +1,10 @@
 import React, { FC } from 'react'
 import { Control } from 'react-hook-form'
 import Input from '@/ui/Input/Input'
-import { CreateProductData } from '../types/types'
+import { EditProductData } from '../types/types'
 
-const ProductCreateFormFields: FC<{
-	control: Control<CreateProductData>
+const ProductEditFormFields: FC<{
+	control: Control<EditProductData>
 }> = ({ control }) => {
 	return (
 		<>
@@ -13,7 +13,6 @@ const ProductCreateFormFields: FC<{
 				name='brand'
 				placeholder='Enter Brand'
 				rules={{
-					required: 'Brand is required',
 					maxLength: {
 						value: 256,
 						message: 'Maximum length is 256'
@@ -27,7 +26,6 @@ const ProductCreateFormFields: FC<{
 				name='model'
 				placeholder='Enter Model'
 				rules={{
-					required: 'Model is required',
 					maxLength: {
 						value: 256,
 						message: 'Maximum length is 256'
@@ -54,7 +52,6 @@ const ProductCreateFormFields: FC<{
 				name='price'
 				placeholder='Enter Price'
 				rules={{
-					required: 'Price is required',
 					pattern: {
 						value: eval('/^\\d+$/'),
 						message: 'Enter number'
@@ -76,7 +73,6 @@ const ProductCreateFormFields: FC<{
 				name='quantity'
 				placeholder='Enter Quantity'
 				rules={{
-					required: 'Quantity is required',
 					pattern: {
 						value: eval('/^\\d+$/'),
 						message: 'Enter number'
@@ -96,4 +92,4 @@ const ProductCreateFormFields: FC<{
 	)
 }
 
-export default ProductCreateFormFields
+export default ProductEditFormFields

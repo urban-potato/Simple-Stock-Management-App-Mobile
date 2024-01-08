@@ -6,7 +6,7 @@ import { IButton } from './types/types'
 const Button: FC<PropsWithChildren<IButton>> = ({
 	children,
 	classNames,
-	onPress
+	...rest
 }) => {
 	return (
 		<Pressable
@@ -14,7 +14,7 @@ const Button: FC<PropsWithChildren<IButton>> = ({
 				' self-center bg-primaryColor py-3 px-8 rounded-xl justify-center items-center ',
 				classNames
 			)}
-			onPress={onPress}
+			{...rest}
 		>
 			<Text className='font-semibold text-white text-xl '>{children}</Text>
 		</Pressable>

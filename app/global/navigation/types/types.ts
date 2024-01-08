@@ -1,9 +1,11 @@
+import { IProduct } from '@/global/types/types'
 import { ComponentType } from 'react'
 
 export type TypeRootStackParamList = {
 	Home: undefined
 	CreateProduct: undefined
-	Product: undefined
+	Product: { id: number }
+	EditProduct: { product: IProduct }
 	Map: undefined
 	Currency: undefined
 }

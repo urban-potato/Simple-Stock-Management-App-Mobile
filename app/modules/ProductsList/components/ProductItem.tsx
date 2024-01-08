@@ -1,19 +1,26 @@
-import { View, Text } from 'react-native'
+import { View, Text, Pressable } from 'react-native'
 import React, { FC } from 'react'
 import { IProduct } from '@/global/types/types'
 import { AppConstants } from '@/global/contants/constants'
 import { SimpleLineIcons } from '@expo/vector-icons'
+import { ProductItemData } from '../types/types'
 
-const ProductItem: FC<IProduct> = ({
+const ProductItem: FC<ProductItemData> = ({
 	id,
 	brand,
 	model,
 	description,
 	price,
-	quantity
+	quantity,
+	navigation
 }) => {
 	return (
-		<View className='flex-row rounded-xl p-4 my-2 bg-primarySemiDarkColor justify-between'>
+		<Pressable
+			className='flex-row flex-wrap rounded-xl p-4 my-2 bg-primarySemiDarkColor justify-between'
+			onPress={() => {
+				navigation.navigate('Product', { id: id })
+			}}
+		>
 			<View>
 				<Text className='text-xl font-bold text-secondaryLightColor'>
 					ID: {id}
@@ -33,7 +40,7 @@ const ProductItem: FC<IProduct> = ({
 					color={AppConstants.secondaryColor}
 				/>
 			</View>
-		</View>
+		</Pressable>
 	)
 }
 
