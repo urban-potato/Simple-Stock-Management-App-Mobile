@@ -20,16 +20,16 @@ const Map: FC = () => {
 						latitude: 55.99434289869557,
 						longitude: 92.79753730675864
 					}}
-					title={'Selling point 1'}
-					description={'Selling point 1'}
+					title={'Selling point'}
+					description={'Selling point'}
 				/>
 				<Marker
 					coordinate={{
 						latitude: 56.022228992785216,
 						longitude: 92.79729439556921
 					}}
-					title={'Selling point 2'}
-					description={'Selling point 2'}
+					title={'Stock'}
+					description={'Stock'}
 				/>
 			</MapView>
 
