@@ -59,3 +59,23 @@ expo build:android
 https://github.com/urban-potato/Simple-Stock-Management-App-Backend
 
 ## Interface preview
+
+### Products screen
+
+![products screen](https://github.com/urban-potato/Simple-Stock-Management-App-Mobile/blob/main/interface_screens/products_screen.png?raw=true)
+
+### Create new product screen
+
+![create new product screen](https://github.com/urban-potato/Simple-Stock-Management-App-Mobile/blob/main/interface_screens/create_new_product_screen.png?raw=true)
+
+### Product screen
+
+![product screen](https://github.com/urban-potato/Simple-Stock-Management-App-Mobile/blob/main/interface_screens/product_screen.png?raw=true)
+
+### Edit product screen
+
+![edit product screen](https://github.com/urban-potato/Simple-Stock-Management-App-Mobile/blob/main/interface_screens/edit_product_screen.png?raw=true)
+
+### Map screen
+
+![map screen](https://github.com/urban-potato/Simple-Stock-Management-App-Mobile/blob/main/interface_screens/map_screen.png?raw=true)
