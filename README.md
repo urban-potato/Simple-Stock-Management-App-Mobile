@@ -4,6 +4,14 @@
 
 Simple Stock Management App (Mobile)
 
+## Technologies
+
+- TypeScript
+- React Native
+- Redux
+- RTK Query
+- NativeWind
+
 ## Preparations
 
 ### 1. Clone and set up the backend
